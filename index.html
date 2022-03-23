@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+    <html>
+	<meta harset="utf-8">
+	<style type="text/css">
+
+    .cent{
+	text-align: center;
+    }
+	table
+	{
+	margin: auto;
+	border: 15px solid DeepSkyBlue;
+	border-radius: 10px;
+	border: 2px solid #d9d9d9;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+
+	}
+	.border-red {
+	border: 1px solid red;
+	}
+	.color{
+	background: #d9d9d9;
+	}
+	.color2{
+	background: #AFEEEE;
+	}
+	p
+	{
+	text-align: center;
+	}
+	.tabl{
+	border: 15px solid DeepSkyBlue;
+	border-radius: 10px 10px 0 0;
+	border: 2px solid #d9d9d9;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+	}
+	.tabl2{
+	border: 15px solid DeepSkyBlue;
+	border-radius: 0 0 10px 10px;
+	border: 2px solid #d9d9d9;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+	}
+
+
+	</style>
+
+
+	<caption><p>Авторизация</p></caption>
+	<body>
+	<table  cellpadding="4" cellspacing="0" border="1">
+	<tr>
+	<div class="test">
+    <form action="contact.php" method="get">
+      <td class="color2 cent tabl"><label for="eml">Логин:</label><br>
+      <input type="email" id="eml" name="eml" placeholder="Ваш логин" required ><br>
+	  
+      <label for="pass">Пароль:</label><br>
+      <input type="password" id="pass" name="pass" placeholder="Ваш пароль" required ><br></tr></td>
+	  
+	  <td class="color tabl2"><label for="check">Запомнить меня</label>
+	  <input type="checkbox" id="check" name="check" checked="yes"/>
+	  
+      <button type="submit">Войти</button></td>
+	    
+    </form>
+	</div>
+    </table>
+	</body>
+	
+
+	<caption><p>Регистрация</p></caption>
+	<body>
+	<table  cellpadding="4" cellspacing="0" border="1">
+	<tr>
+	<div>
+    <form action="contact.php" method="get">
+      <td class="cent color2 tabl"><label for="eml">Логин:</label><br>
+      <input type="email" id="eml" name="eml" placeholder="Ваш логин" required ><br>
+	  
+	  <label for="nam1">Фамилия:</label><br>
+      <input type="uname" id="nam1" name="nam1" placeholder="Ваша фамилия" required ><br>
+	  
+	  <label for="nam">Имя:</label><br>
+      <input type="uname" id="nam" name="nam" placeholder="Ваше имя" required ><br>
+	  
+      <label for="password">Пароль:</label><br>
+      <input id="password" type="password" name="password" placeholder="Ваш пароль" required><br>
+	  
+	  <label for="repest-password">Повтор пароля:</label><br>
+      <input id="password-repeat" type="password" name="password-repeat" placeholder="Ваш пароль ещё раз" required><br></td></tr>
+	  
+	  
+	  <td class="color tabl2"><label for="check">Согласие на обработку<br>персональных данных</label>
+	  <input type="checkbox" id="check" name="check" checked="yes" required />
+	  
+	  
+      <button type="submit" class="send">Зарегистрироваться</button></td>
+
+    </form>
+	
+	
+	<script language="JavaScript">
+    const password = document.getElementById('password');
+const passwordRepeat = document.getElementById('password-repeat');
+
+const checkPassword = () => password.value === passwordRepeat.value;
+
+passwordRepeat.addEventListener("change", () => { 
+  const isSame = checkPassword();
+  
+  if (!isSame) {
+  	passwordRepeat.classList.add('border-red');
+  } else {
+  	passwordRepeat.classList.remove('border-red');
+  }
+});
+    </script>
+		  
+    </div>
+    </table>
+	</body>
+
+
+</html>
